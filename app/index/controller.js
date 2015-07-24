@@ -11,8 +11,7 @@ export default Ember.Controller.extend({
         dataType: "jsonp",
         url: "https://api.instagram.com/v1/tags/" + self.get('tag') + "/media/recent?client_id=2172319fa6924d6ea3f5b80f260e5703&callback=callbackFunction",
         success: function(data) {
-          console.log(data.data)
-          self.set('pictures', data.data)
+          self.set('pictures', data.data);
         }
       });
     }

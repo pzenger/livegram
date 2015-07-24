@@ -6,7 +6,7 @@ export default Ember.Route.extend({
     return Ember.RSVP.hash({
       tag: 'Cat',
       pictures: Ember.A([]),
-    })
+    });
   },
 
   setupController: function(controller, models) {
