@@ -15,7 +15,6 @@ export default Ember.Controller.extend({
           self.set('pictures', data.data)
         }
       });
-      this.set('pictures', Ember.A([1, 2, 3, 4]));
     }
   }
 });

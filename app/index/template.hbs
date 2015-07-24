@@ -5,7 +5,7 @@
       {{!-- submit=(action 'getPictures') --}}
     </div>
     <div class="col-md-12">
-      {{refresh-timer tag=tag timeAction=(action 'getPictures' tag)}}
+      {{refresh-timer timeAction=(action 'getPictures' tag)  timeSeconds=5}}
     </div>
   </div>
   <div class="row text-center">
