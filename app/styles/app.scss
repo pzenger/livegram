@@ -1,3 +1,19 @@
-@import "settings";
+@import "blink";
 
-@import "foundation";
+body {
+  background-color: #eee;
+}
+
+.big-text {
+  font-size: 5em;
+}
+
+input[type="text"]{
+    background-color: transparent;
+    border: 0px;
+    outline: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    width:5px;
+}

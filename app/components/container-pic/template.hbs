@@ -1,1 +1,9 @@
-Container
+{{#each gallery as |picture|}}
+  <div class="col-md-3">
+    {{container-pic/image image=picture}}
+  </div>
+  {{else}}
+    <div class="col-md-12 text-center">
+      No pictures found for #{{tag}}
+    </div>
+{{/each}}

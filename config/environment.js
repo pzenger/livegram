@@ -24,7 +24,7 @@ module.exports = function(environment) {
     'font-src': "'self'",
     'connect-src': "'self'",
     'img-src': "'self'",
-    'style-src': "'self' 'unsafe-inline'",
+    'style-src': "'self' 'unsafe-inline' maxcdn.bootstrapcdn.com",
     'media-src': "'self'"
   }
   };
