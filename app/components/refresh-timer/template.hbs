@@ -1,1 +1,5 @@
-<button {{action 'fetch'}}>Fetch</button>
+<div class="progress">
+  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow={{timeLeft}} aria-valuemin="0" aria-valuemax={{timeSeconds}} style="width:{{percentDone}}%">
+    <span class="sr-only">{{percentDone}}% to refresh</span>
+  </div>
+</div>

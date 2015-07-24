@@ -1,17 +1,16 @@
+<div class="col-md-12">
+  {{refresh-timer timeAction=(action 'getPictures' tag)  timeSeconds=10}}
+</div>
+
 <div class="container space-top">
   <div class="row text-center">
     <div class="col-md-12">
       {{input-tag tag=tag }}
-      {{!-- submit=(action 'getPictures') --}}
-    </div>
-    <div class="col-md-12">
-      {{refresh-timer timeAction=(action 'getPictures' tag)  timeSeconds=5}}
     </div>
   </div>
   <div class="row text-center">
     <div class="col-md-12">
       {{container-pic gallery=pictures}}
     </div>
-
   </div>
 </div>

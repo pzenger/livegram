@@ -4,30 +4,33 @@ export default Ember.Component.extend({
 
   timeSeconds: 60,
   timeLeft: 60,
+  percentDone: 100,
   interval: null,
 
+  // Start an interval
   didInsertElement: function() {
-    // TODO:  Set an interval passed in.
     let self = this;
     let _interval = null;
-    // var interval;
 
-    console.log('setting interval')
-    console.log(this.get('timeSeconds '))
-    this.set('timeLeft', this.get('timeSeconds'))
-
+    this.set('timeLeft', this.get('timeSeconds'));
     _interval = setInterval(function() {
       self.set('timeLeft', self.get('timeLeft') - 1);
-      // self.attrs.timeAction();
-    }, self.get('timeSeconds') * 1000);
+    }, 1 * 1000);
 
     this.set('interval', _interval);
   },
 
-  //   actions: {
-  //   fetch: function() {
-  //     console.log('fetch called')
-  //     this.attrs.timeAction();
-  //   }
-  // }
+  // Update when time left is 0
+  updateImages: function(){
+
+    if(this.get('timeLeft') <= 0) {
+      this.attrs.timeAction();
+      this.set('timeLeft', this.get('timeSeconds'));
+    } else {
+      this.set('percentDone', (this.get('timeLeft') / this.get('timeSeconds')) * 100);
+    }
+  }.observes('timeLeft')
+
+  //Something to update and restart the interval
+
 });
