@@ -5,7 +5,13 @@ export default function() {
     this.hasClass('slider'),
     this.use('explode', {
       matchBy: 'data-image-id',
-      use: ['fly-to', {duration}]
+      use: ['fly-to', {
+        duration
+      }]
+    }, {
+      use: ['fade', {
+        duration: duration / 2
+      }]
     })
   );
 

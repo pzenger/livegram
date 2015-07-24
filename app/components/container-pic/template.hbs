@@ -1,12 +1,16 @@
-{{#liquid-bind gallery class="slider" as |pictures|}}
+{{#liquid-if gallery}}
 
-  {{#each pictures as |picture|}}
-    <div class="col-md-3 pic-wrapper" data-image-id="{{picture.id}}">
-      {{container-pic/image image=picture}}
-    </div>
-    {{else}}
-      <div class="col-md-12 text-center">
-        No pictures found for #{{tag}}
+  {{#liquid-bind gallery class="slider" as |pictures|}}
+    {{#each pictures as |picture|}}
+      <div class="col-md-3 pic-wrapper" data-image-id="{{picture.id}}">
+        {{container-pic/image image=picture}}
       </div>
-  {{/each}}
-{{/liquid-bind}}
+    {{/each}}
+  {{/liquid-bind}}
+
+  {{else}}
+    <div class="col-md-12 text-center text-muted">
+      No pictures yet. Try a different tag or wait for a refresh.
+    </div>
+
+{{/liquid-if}}
