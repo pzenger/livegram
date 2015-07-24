@@ -1,2 +1,2 @@
 # livegram
-Live stream from an Instragram tag
+Live stream of an Instagram tag
