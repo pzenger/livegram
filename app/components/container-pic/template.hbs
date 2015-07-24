@@ -2,7 +2,7 @@
 
   {{#liquid-bind gallery class="slider" as |pictures|}}
     {{#each pictures as |picture|}}
-      <div class="col-md-3 pic-wrapper" data-image-id="{{picture.id}}">
+      <div class="col-xs-6 col-sm-4 col-md-3 pic-wrapper" data-image-id="{{picture.id}}">
         {{container-pic/image image=picture}}
       </div>
     {{/each}}
