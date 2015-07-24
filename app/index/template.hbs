@@ -1,9 +1,11 @@
-Tag: {{tag}} pics: {{pictures}}
-
-<div class="container">
+<div class="container space-top">
   <div class="row text-center">
-    <div class="col-md-offset-3 col-md-6">
-      {{input-tag tag=tag submit=(action 'setTag')}}
+    <div class="col-md-12">
+      {{input-tag tag=tag }}
+      {{!-- submit=(action 'getPictures') --}}
+    </div>
+    <div class="col-md-12">
+      {{refresh-timer tag=tag timeAction=(action 'getPictures' tag)}}
     </div>
   </div>
   <div class="row text-center">

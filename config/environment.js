@@ -20,10 +20,10 @@ module.exports = function(environment) {
 
   contentSecurityPolicy: {
     'default-src': "'none'",
-    'script-src': "'self'",
-    'font-src': "'self'",
+    'script-src': "'self' api.instagram.com",
+    'font-src': "'self' maxcdn.bootstrapcdn.com",
     'connect-src': "'self'",
-    'img-src': "'self'",
+    'img-src': "'self' scontent.cdninstagram.com",
     'style-src': "'self' 'unsafe-inline' maxcdn.bootstrapcdn.com",
     'media-src': "'self'"
   }

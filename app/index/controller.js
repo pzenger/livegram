@@ -2,13 +2,20 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
 
-  actions: {
-    setTag(newTag) {
-      console.log('Set tag called')
-      // console.log(newTag)
-      // let oldTag = this.get('tag');
-      // console.log(oldTag)
 
+  actions: {
+    getPictures: function() {
+      let self = this;
+      Ember.$.ajax({
+        type: "GET",
+        dataType: "jsonp",
+        url: "https://api.instagram.com/v1/tags/" + self.get('tag') + "/media/recent?client_id=2172319fa6924d6ea3f5b80f260e5703&callback=callbackFunction",
+        success: function(data) {
+          console.log(data.data)
+          self.set('pictures', data.data)
+        }
+      });
+      this.set('pictures', Ember.A([1, 2, 3, 4]));
     }
   }
 });
