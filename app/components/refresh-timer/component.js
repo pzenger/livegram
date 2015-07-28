@@ -4,7 +4,7 @@ export default Ember.Component.extend({
 
   timeSeconds: 60,
   timeLeft: 60,
-  percentDone: 100,
+  percentDone: 0,
   interval: null,
 
   // Start an interval
@@ -27,7 +27,7 @@ export default Ember.Component.extend({
       this.attrs.timeAction();
       this.set('timeLeft', this.get('timeSeconds'));
     } else {
-      this.set('percentDone', (this.get('timeLeft') / this.get('timeSeconds')) * 100);
+      this.set('percentDone', ((this.get('timeSeconds') - this.get('timeLeft') + 1) / this.get('timeSeconds')) * 100);
     }
   }.observes('timeLeft')
 
