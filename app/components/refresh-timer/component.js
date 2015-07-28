@@ -7,6 +7,7 @@ export default Ember.Component.extend({
   percentDone: 0,
   interval: null,
 
+
   // Start an interval
   didInsertElement: function() {
     let self = this;
@@ -29,8 +30,10 @@ export default Ember.Component.extend({
     } else {
       this.set('percentDone', ((this.get('timeSeconds') - this.get('timeLeft') + 1) / this.get('timeSeconds')) * 100);
     }
-  }.observes('timeLeft')
+  }.observes('timeLeft'),
 
-  //Something to update and restart the interval
+  updateTime: function() {
+    this.set('timeLeft', this.get('timeSeconds'));
+  }.observes('timeSeconds')
 
 });
