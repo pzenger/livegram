@@ -1,5 +1,6 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  tag: null
+  tag: null,
+  refreshTime: null
 });

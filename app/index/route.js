@@ -6,6 +6,7 @@ export default Ember.Route.extend({
     return Ember.RSVP.hash({
       tag: 'Cat',
       pictures: Ember.A([]),
+      refreshTime: 10,
     });
   },
 

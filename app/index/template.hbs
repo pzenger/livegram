@@ -1,11 +1,11 @@
 <div class="col-md-12">
-  {{refresh-timer timeAction=(action 'getPictures' tag)  timeSeconds=10}}
+  {{refresh-timer timeAction=(action 'getPictures' tag)  timeSeconds=refreshTime}}
 </div>
 
 <div class="container space-top text-center">
   <div class="row">
     <div class="col-xs-12">
-      {{input-tag tag=tag }}
+      {{input-tag tag=tag refreshTime=refreshTime}}
     </div>
   </div>
   <div class="row text-center">
