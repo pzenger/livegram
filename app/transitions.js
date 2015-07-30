@@ -15,4 +15,11 @@ export default function() {
     })
   );
 
+  this.transition(
+    this.hasClass('pic-container'),
+    this.toValue(true),
+    this.use('crossFade', { duration: duration * 2 }),
+    this.debug()
+  );
+
 }

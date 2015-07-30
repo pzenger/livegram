@@ -1,7 +1,7 @@
 @import "blink";
 
 body {
-  background-color: #eee;
+  background-color: #fff;
 }
 
 .big-text {
@@ -41,4 +41,14 @@ footer {
 
 .skinny {
   width: 125px !important;
+}
+
+.progress-bar {
+  background-color: #999;
+  color: white;
+}
+
+.progress {
+  background-color: white;
+  box-shadow: none;
 }

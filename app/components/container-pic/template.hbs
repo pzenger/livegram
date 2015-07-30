@@ -1,4 +1,4 @@
-{{#liquid-if gallery}}
+{{#liquid-if gallery class="pic-container"}}
 
   {{#liquid-bind gallery class="slider" as |pictures|}}
     {{#each pictures as |picture|}}
@@ -8,9 +8,9 @@
     {{/each}}
   {{/liquid-bind}}
 
-  {{else}}
-    <div class="col-md-12 text-center text-muted">
-      No pictures yet. Try a different tag or wait for a refresh.
-    </div>
+{{else}}
+  <div class="col-md-12 text-center text-muted">
+    No pictures yet. Try a different tag or wait for a refresh.
+  </div>
 
 {{/liquid-if}}
